@@ -105,6 +105,10 @@ endif
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+" Move up and down in autocomplete with <c-j> and <c-k>
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
+
 " alt + (up || down) in all modes. 
 nnoremap <A-Down> :m .+1<CR>==
 nnoremap <A-Up> :m .-2<CR>==
